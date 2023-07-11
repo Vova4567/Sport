@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Load the data containing information about sports nutrition production
+data = pd.read_csv('sports_nutrition_data.csv')  # Replace 'sports_nutrition_data.csv' with the actual filename or path
+
+# Filter the data for sports nutrition products
+sports_nutrition = data[data['product_category'] == 'Sports Nutrition']
+
+# Calculate the production quantity
+total_production = sports_nutrition['quantity'].sum()
+
+# Print the result
+print("Total production of sports nutrition:", total_production)
